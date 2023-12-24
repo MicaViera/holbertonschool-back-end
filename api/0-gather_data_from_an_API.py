@@ -12,9 +12,9 @@ if __name__ == "__main__":
     data = requests.get(url + f"users/{userID}").json()
     tasks = requests.get(f"{url}users/{userID}/todos").json()
     completed_tasks = []
-    for tasks in tasks:
-        if tasks["completed"]:
-            completed_tasks.append(tasks)
+    for task in tasks:
+        if task["completed"]:
+            completed_tasks.append(task)
 
     print(f"Employee {data['name']} is done with ", end="")
     print(f"tasks({len(completed_tasks)}/{len(tasks)}):")
