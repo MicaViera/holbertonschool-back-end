@@ -19,4 +19,4 @@ if __name__ == "__main__":
                         "completed": all.get("completed"), "username": data}
             completed_tasks.append(all_data)
         info = {userID: completed_tasks}
-        file.write(json.dumps(data))
+        file.write(json.dumps(info))
